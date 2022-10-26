@@ -8,6 +8,7 @@ html {
 
 }
 
+
 body {
   display: flex;
   flex-direction: row;
@@ -16,6 +17,41 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   position: relative;
+}
+
+ion-icon {
+  font-size: 28px;
+  color: black;
+}
+
+#hambMenu{
+  width: 100%;
+
+}
+
+#hambMenu a.icon {
+  background: white;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#hambList{
+  top: 0px;
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  background-color: #E8E8E8;
+  text-align: center;
+  font-size: 40px;
+  -webkit-transition: all 0.5s ease-out;
+}
+
+#hambList li a{
+  text-decoration: none;
+  color: black;
+
 }
 
 .sidebar{
