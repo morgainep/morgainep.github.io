@@ -43,16 +43,8 @@ while(images[i]) {
 function imgMouseOver(e) {
   var curImg = e.currentTarget;
   var index = parseInt((curImg.id)[0]);
-  console.log(caps)
   var el = caps[index];
   el.style.display = "block"
-  let start = Date.now();
-  let timer = setInterval(function() {
-        let timePassed = Date.now() - start;
-        el.style.top = timePassed / 5 + 'px';
-        if (timePassed > 500) clearInterval(timer);
-
-      }, 20);
 }
 
 function imgMouseLeave(e) {
