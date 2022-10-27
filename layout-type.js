@@ -13,59 +13,7 @@ function createSidebar() {
   menu.id = "menu";
   var mainlist = document.createElement('ul');
 
-  var home = document.createElement('li');
-  var linkHome = document.createElement('a');
-  linkHome.href = "index.html";
-  linkHome.appendChild(document.createTextNode("HOME"));
-  home.appendChild(linkHome);
-  mainlist.appendChild(home);
-
-  var portfolio = document.createElement('li');
-  var linkPortfolio = document.createElement('a');
-  linkPortfolio.href = "";
-  linkPortfolio.appendChild(document.createTextNode("PORTFOLIO"));
-  portfolio.appendChild(linkPortfolio);
-  mainlist.appendChild(portfolio);
-
-  var sublist = document.createElement('ul');
-  sublist.classList.add("submenu");
-
-  var sli1 = document.createElement('li');
-  var linkSli1 = document.createElement('a');
-  linkSli1.href = "portfolio/1.html";
-  linkSli1.appendChild(document.createTextNode("POPRONDE UTRECHT"));
-  sli1.appendChild(linkSli1);
-  sublist.appendChild(sli1);
-
-  var sli2 = document.createElement('li');
-  var linkSli2 = document.createElement('a');
-  linkSli2.href = "";
-  linkSli2.appendChild(document.createTextNode("DAVID ROOKER"));
-  sli2.appendChild(linkSli2);
-  sublist.appendChild(sli2);
-
-  var sli3 = document.createElement('li');
-  var linkSli3 = document.createElement('a');
-  linkSli3.href = "";
-  linkSli3.appendChild(document.createTextNode("JAPAN"));
-  sli3.appendChild(linkSli3);
-  sublist.appendChild(sli3);
-
-  portfolio.appendChild(sublist);
-
-  var about = document.createElement('li');
-  var linkAbout = document.createElement('a');
-  linkAbout.href = "about.html";
-  linkAbout.appendChild(document.createTextNode("ABOUT"));
-  about.appendChild(linkAbout);
-  mainlist.appendChild(about);
-
-  var contact = document.createElement('li');
-  var linkContact = document.createElement('a');
-  linkContact.href = "contact.html";
-  linkContact.appendChild(document.createTextNode("CONTACT"));
-  contact.appendChild(linkContact);
-  mainlist.appendChild(contact);
+  addMenuItems(mainlist, false);
 
   menu.appendChild(mainlist);
   sidebar.appendChild(menu);
@@ -91,14 +39,14 @@ function createHambMenu() {
   var hambList = document.createElement('ul')
   hambList.id = "hambList";
 
-  addMenuItems(hambList);
+  addMenuItems(hambList, true);
 
   hambMenu.appendChild(hambList);
   document.body.appendChild(hambMenu);
 
 }
 
-function addMenuItems(m) {
+function addMenuItems(m, flag) {
   var home = document.createElement('li');
   var linkHome = document.createElement('a');
   linkHome.href = "index.html";
@@ -108,9 +56,10 @@ function addMenuItems(m) {
 
   var portfolio = document.createElement('li');
   var linkPortfolio = document.createElement('a');
-  linkPortfolio.href = "";
+  linkPortfolio.href = "javascript:void(0);";
   linkPortfolio.appendChild(document.createTextNode("PORTFOLIO"));
   portfolio.appendChild(linkPortfolio);
+  makeSubmenu(portfolio, flag);
   m.appendChild(portfolio);
 
   var about = document.createElement('li');
@@ -132,8 +81,47 @@ function hambClick() {
   var x = document.getElementById("hambList");
   var hambMenu = document.getElementById("hambMenu");
   if (x.style.maxHeight == "0px") {
-    x.style.maxHeight = "200px";
+    x.style.maxHeight = "100vh";
   } else {
     x.style.maxHeight = "0px";
+  }
+}
+
+function makeSubmenu(el, flag) {
+  var sublist = document.createElement('ul');
+  sublist.classList.add("submenu");
+
+  var sli1 = document.createElement('li');
+  var linkSli1 = document.createElement('a');
+  linkSli1.href = "popronde-u.html";
+  linkSli1.appendChild(document.createTextNode("POPRONDE UTRECHT"));
+  sli1.appendChild(linkSli1);
+  sublist.appendChild(sli1);
+
+  var sli2 = document.createElement('li');
+  var linkSli2 = document.createElement('a');
+  linkSli2.href = "david-rooker.html";
+  linkSli2.appendChild(document.createTextNode("DAVID ROOKER"));
+  sli2.appendChild(linkSli2);
+  sublist.appendChild(sli2);
+
+  var sli3 = document.createElement('li');
+  var linkSli3 = document.createElement('a');
+  linkSli3.href = "";
+  linkSli3.appendChild(document.createTextNode("JAPAN"));
+  sli3.appendChild(linkSli3);
+  sublist.appendChild(sli3);
+
+  el.appendChild(sublist);
+  if (flag) {
+    el.onclick = function() {portfClick(sublist)}
+  }
+}
+
+function portfClick(sublist){
+  if (sublist.style.maxHeight == "0px") {
+    sublist.style.maxHeight = "400px";
+  } else {
+    sublist.style.maxHeight = "0px";
   }
 }

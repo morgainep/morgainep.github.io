@@ -26,19 +26,18 @@ ion-icon {
 
 #hambMenu{
   width: 100%;
-
 }
 
 #hambMenu a.icon {
-  background: white;
+  background: transparent;
   display: block;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 8px;
+  top: 12px;
 }
 
 #hambList{
-  top: 0px;
+  /*top: 0px;*/
   max-height: 0;
   overflow: hidden;
   width: 100%;
@@ -51,7 +50,6 @@ ion-icon {
 #hambList li a{
   text-decoration: none;
   color: black;
-
 }
 
 .sidebar{
@@ -105,7 +103,7 @@ ion-icon {
 .submenu{
   list-style: none;
   overflow: hidden;
-  max-height: 0;
+  max-height: 0px;
   -webkit-transition: all 0.5s ease-out;
 }
 
@@ -134,12 +132,13 @@ ion-icon {
   flex-direction: column;
   justify-content: flex;
   font-weight: bold;
-
 }
 
 .header{
+  margin-top: 5%;
+  margin-bottom: 5%;
   display: flex;
-  font-size: 8vw;
+  font-size: 50px;
   align-self: center;
   text-align: center;
   justify-content: center;
@@ -151,7 +150,10 @@ ion-icon {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  text-align: center;
+  font-weight: normal;
 }
+
 
 .infobox{
   display: flex;
@@ -159,7 +161,10 @@ ion-icon {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  vertical-align: center;
+  text-align: center;
   font-weight: normal;
+  min-height: 90vh;
 }
 
 .imgwrap{
