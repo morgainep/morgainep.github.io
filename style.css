@@ -26,6 +26,7 @@ ion-icon {
 
 #hambMenu{
   width: 100%;
+  height: 0%;
 }
 
 #hambMenu a.icon {
@@ -37,7 +38,7 @@ ion-icon {
 }
 
 #hambList{
-  /*top: 0px;*/
+  list-style: none;
   max-height: 0;
   overflow: hidden;
   width: 100%;
@@ -45,6 +46,11 @@ ion-icon {
   text-align: center;
   font-size: 40px;
   -webkit-transition: all 0.5s ease-out;
+}
+
+#hambList li{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #hambList li a{
@@ -65,7 +71,7 @@ ion-icon {
 }
 
 #menu{
-  flex: 1;
+  /*flex: 1;*/
   position: fixed;
 }
 
@@ -128,13 +134,14 @@ ion-icon {
 .wrap{
   display: flex;
   order: 2;
-  flex: 5;
+  flex: 5 0 0;
   flex-direction: column;
   justify-content: flex;
   font-weight: bold;
 }
 
 .header{
+  max-height: 20vh;
   margin-top: 5%;
   margin-bottom: 5%;
   display: flex;
@@ -146,6 +153,7 @@ ion-icon {
 
 #carousel{
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
@@ -155,16 +163,34 @@ ion-icon {
 }
 
 
-.infobox{
+#infobox{
+  position: relative;
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
   vertical-align: center;
   text-align: center;
   font-weight: normal;
-  min-height: 90vh;
+}
+
+.infowrap{
+  text-align: justify;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 70%;
+  max-width: 300px;
+}
+
+.mail{
+  text-align: center;
+}
+
+.headerbox{
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .imgwrap{

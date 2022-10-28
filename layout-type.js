@@ -3,7 +3,8 @@ let width  = screen.width;
 if (width > height) {
   createSidebar()
 } else {
-  createHambMenu()
+  document.body.style.flexDirection = "column";
+  createHambMenu();
 }
 
 function createSidebar() {
@@ -50,14 +51,14 @@ function addMenuItems(m, flag) {
   var home = document.createElement('li');
   var linkHome = document.createElement('a');
   linkHome.href = "index.html";
-  linkHome.appendChild(document.createTextNode("HOME"));
+  linkHome.appendChild(document.createTextNode("home"));
   home.appendChild(linkHome);
   m.appendChild(home);
 
   var portfolio = document.createElement('li');
   var linkPortfolio = document.createElement('a');
   linkPortfolio.href = "javascript:void(0);";
-  linkPortfolio.appendChild(document.createTextNode("PORTFOLIO"));
+  linkPortfolio.appendChild(document.createTextNode("portfolio"));
   portfolio.appendChild(linkPortfolio);
   makeSubmenu(portfolio, flag);
   m.appendChild(portfolio);
@@ -65,14 +66,14 @@ function addMenuItems(m, flag) {
   var about = document.createElement('li');
   var linkAbout = document.createElement('a');
   linkAbout.href = "about.html";
-  linkAbout.appendChild(document.createTextNode("ABOUT"));
+  linkAbout.appendChild(document.createTextNode("about"));
   about.appendChild(linkAbout);
   m.appendChild(about);
 
   var contact = document.createElement('li');
   var linkContact = document.createElement('a');
   linkContact.href = "contact.html";
-  linkContact.appendChild(document.createTextNode("CONTACT"));
+  linkContact.appendChild(document.createTextNode("contact"));
   contact.appendChild(linkContact);
   m.appendChild(contact);
 }
@@ -105,12 +106,12 @@ function makeSubmenu(el, flag) {
   sli2.appendChild(linkSli2);
   sublist.appendChild(sli2);
 
-  var sli3 = document.createElement('li');
+  /*var sli3 = document.createElement('li');
   var linkSli3 = document.createElement('a');
   linkSli3.href = "";
   linkSli3.appendChild(document.createTextNode("JAPAN"));
   sli3.appendChild(linkSli3);
-  sublist.appendChild(sli3);
+  sublist.appendChild(sli3);*/
 
   el.appendChild(sublist);
   if (flag) {
