@@ -106,12 +106,12 @@ function makeSubmenu(el, flag) {
   sli2.appendChild(linkSli2);
   sublist.appendChild(sli2);
 
-  /*var sli3 = document.createElement('li');
+  var sli3 = document.createElement('li');
   var linkSli3 = document.createElement('a');
-  linkSli3.href = "";
-  linkSli3.appendChild(document.createTextNode("JAPAN"));
+  linkSli3.href = "hba.html";
+  linkSli3.appendChild(document.createTextNode("HBA SHOWCASES"));
   sli3.appendChild(linkSli3);
-  sublist.appendChild(sli3);*/
+  sublist.appendChild(sli3);
 
   el.appendChild(sublist);
   if (flag) {
