@@ -4,11 +4,6 @@
     font-family: 'Fjalla One'
 }
 
-html {
-
-}
-
-
 body {
   display: flex;
   flex-direction: row;
@@ -162,6 +157,16 @@ ion-icon {
   font-weight: normal;
 }
 
+#resume ul{
+  margin-top: 2%;
+}
+
+#resume ul li{
+  list-style-position: inside;
+  list-style-type: disc;
+  padding-bottom: 0%;
+  margin: 0;
+}
 
 #infobox{
   position: relative;
@@ -172,16 +177,42 @@ ion-icon {
   justify-content: flex-start;
   align-content: center;
   vertical-align: center;
-  text-align: center;
+  text-align: left;
   font-weight: normal;
+  margin-bottom:100px;
 }
 
 .infowrap{
-  text-align: justify;
-  padding-left: 5%;
-  padding-right: 5%;
+  text-align: left;
   width: 70%;
-  max-width: 300px;
+  padding-bottom: 5%;
+}
+
+.infowrap ul{
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+.infowrap ul li{
+  padding-bottom: 3%;
+}
+
+.experience-entry{
+  margin-bottom: 3%;
+}
+
+.experience-entry-title{
+  font-size: 23px;
+  text-align: left;
+}
+
+.experience-entry-location{
+  font-size: 18px;
+  text-align: left;
+}
+
+.experience-entry-period{
+  text-align: left;
 }
 
 .mail{

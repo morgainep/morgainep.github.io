@@ -63,12 +63,12 @@ function addMenuItems(m, flag) {
   makeSubmenu(portfolio, flag);
   m.appendChild(portfolio);
 
-  var about = document.createElement('li');
-  var linkAbout = document.createElement('a');
-  linkAbout.href = "about.html";
-  linkAbout.appendChild(document.createTextNode("about"));
-  about.appendChild(linkAbout);
-  m.appendChild(about);
+  var resume = document.createElement('li');
+  var linkResume = document.createElement('a');
+  linkResume.href = "resume.html";
+  linkResume.appendChild(document.createTextNode("resume"));
+  resume.appendChild(linkResume);
+  m.appendChild(resume);
 
   var contact = document.createElement('li');
   var linkContact = document.createElement('a');
